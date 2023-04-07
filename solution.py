@@ -11,5 +11,5 @@ def solution(p: float, x: np.array) -> tuple:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     alpha = 1 - p
-    return 2/9604*( expon.ppf(alpha / 2) - 0.5 + min(x) ), \
-           2/9604*( expon.ppf(1 - alpha / 2) - 0.5 + min(x) )
+    return 2/9604*( 0 - 0.5 + min(x) ), \
+           2/9604*( -np.log((1 - p)/len(x)) - 0.5 + min(x) )
